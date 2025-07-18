@@ -27,7 +27,7 @@
           <div class="box-whatsapp">
             <p>Entrega a domicílio, ligue e peça</p>
             <a
-              href="https://wa.me/5599999999999"
+              href="https://wa.me/5562995133306"
               target="_blank"
               class="btn-zap-header"
             >
@@ -44,5 +44,123 @@
         </div>
       </div>
     </header>
+    <main>
+      <!--------------------------------- BANNER INICIAL --------------------------->
+      <div class="container_banner">
+        <img
+          src="./assets/banner_header_desktop.png"
+          alt=""
+          class="banner_desktop"
+        />
+        <img
+          src="./assets/banner_header_mobile.png"
+          alt=""
+          class="banner_mobile"
+        />
+        <div class="botoes_flutuantes">
+          <a
+            href="https://www.instagram.com/mrfarmaps/"
+            target="_blank"
+            class="btn-flutuante-instagram"
+          >
+            <img src="assets/insta_icon.png" alt="Instagram" />
+            Visite nosso Instagram
+          </a>
+
+          <a
+            href="https://wa.me/5562995133306"
+            target="_blank"
+            class="btn-flutuante-whatsapp"
+          >
+            <img src="assets/zap_icon.png" alt="WhatsApp" />
+            Chame no Whatsapp
+          </a>
+        </div>
+      </div>
+
+      <!-------------------------  CONTAINER QUALIDADES ------------------------->
+      <div class="container_qualidades">
+        <p class="qualidade_horario">
+          Entregamos nosso melhor de Segunda a Sábado das 07:30 às 20:30,
+          inclusive feriados.
+        </p>
+
+        <div class="qualidades_boxes">
+          <div class="qualidade_box">
+            <div class="box_azul">
+              <img src="./assets/icon_qualidade.png" alt="" class="" />
+            </div>
+            <p class="box_azul_text">QUALIDADE</p>
+          </div>
+
+          <div class="qualidade_box">
+            <div class="box_azul">
+              <img src="./assets/icon_satisfacao.png" alt="" class="" />
+            </div>
+            <p class="box_azul_text">SATISFAÇÃO</p>
+          </div>
+
+          <div class="qualidade_box">
+            <div class="box_azul">
+              <img src="./assets/icon_cuidado.png" alt="" class="" />
+            </div>
+            <p class="box_azul_text">CUIDADO</p>
+          </div>
+
+          <div class="qualidade_box">
+            <div class="box_azul">
+              <img src="./assets/icon_compromisso.png" alt="" class="" />
+            </div>
+            <p class="box_azul_text">COMPROMISSO</p>
+          </div>
+        </div>
+      </div>
+
+      <!--------------------- CONTAINER PRODUTOS ------------------------>
+      
+
+
+
+    </main>
+
+    <!-- SCRIPT ======================================== -->
+    <script>
+      const boxes = document.querySelectorAll(".box_azul");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.6, // visibilidade mínima pra ativar
+        }
+      );
+
+      boxes.forEach((box) => {
+        observer.observe(box);
+      });
+      const qualidadeTexto = document.querySelector(".qualidade_horario");
+
+      const observerQualidade = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              qualidadeTexto.classList.add("ativo");
+            }
+          });
+        },
+        {
+          threshold: 0.6,
+        }
+      );
+
+      if (qualidadeTexto) {
+        observerQualidade.observe(qualidadeTexto);
+      }
+    </script>
   </body>
 </html>

@@ -1,0 +1,145 @@
+
+/* VARIÁVEIS SALVAS PRA UTILIZAÇÃO */
+:root {
+  --cor-vermelho-principal: #EC3237;
+  --branco: #ffffff;
+  --preto: #000;
+  --amarelo: #FFCC00;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--branco);
+}
+
+.header {
+  background-color: var(--cor-vermelho-principal);
+  padding: 16px 24px;
+}
+
+.header-content {
+  display: flex;
+  
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 180px;
+  max-width: 100%;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  margin-right: 5rem;
+  justify-content: center;
+}
+.box-insta {
+    display: flex;
+    flex-direction: column;
+}
+/* ANIMAÇÃO INSTAGRAM: chacoalhar */
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-10deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+.btn-insta-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  
+  color: var(--branco);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  
+  
+}
+.btn-insta-header img{
+    width: 50px;
+    animation: shake 1.2s infinite;
+  animation-delay: 1s;
+}
+.box-whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+.box-whatsapp p {
+    color: var(--branco);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+/* ANIMAÇÃO WHATSAPP: pulsar */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.btn-zap-header {
+  display: flex;
+  animation: pulse 1.8s infinite;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--branco);
+  color: var(--preto);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 40px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn-zap-header img {
+    width: 50px;
+}
+
+.header-funcionamento {
+    width: 30vw;
+}
+.header-funcionamento p{
+    color: var(--branco);
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: justify;
+    padding-right: 1rem;
+}
+.header-funcionamento p span{
+    color: var(--amarelo);
+    font-weight: bold;
+}
+
+
+
+@media (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+  }
+
+  .header-buttons {
+    margin-top: 0;
+  }
+}

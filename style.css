@@ -18,11 +18,18 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--branco);
   overflow-x: hidden;
+  margin-top: 160px;
 }
 
 .header {
   background-color: var(--cor-vermelho-principal);
   padding: 16px 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 120px;
 }
 
 .header-content {
@@ -137,7 +144,7 @@ body {
   font-size: 18px;
   text-transform: uppercase;
   text-align: center;
-  padding-right: 1rem;
+  margin-right: 3rem;
 }
 .header-funcionamento p span {
   color: var(--amarelo);
@@ -453,22 +460,31 @@ body {
 
 /* ! FOOTERRRRRRRRRRRRRRRRRRR */
 .container_footer {
+  
   margin-top: 4rem;
   padding: 5rem;
   background-color: var(--cor-vermelho-principal);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.endereco_footer {
+  font-size: 18px;
+  color: var(--branco);
+  padding-bottom: 2rem;
+}
 .logo_footer {
+  margin-top: 2rem;
   width: 30vw;
 }
 
 /* ===========================  VERSÃO MOBILE =================================== */
 @media (max-width: 767px) {
+  
   .header-content {
     display: flex;
-
+    
     align-items: center;
   }
 
@@ -544,16 +560,7 @@ body {
     aspect-ratio: 768 / 851;
   }
   .botoes_flutuantes {
-    position: absolute;
-    bottom: 5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    width: auto;
-    z-index: 10;
+    display: none;
     
   }
   .btn-flutuante-instagram {

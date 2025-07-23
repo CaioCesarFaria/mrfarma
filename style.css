@@ -5,6 +5,7 @@
   --preto: #000;
   --amarelo: #ffcc00;
   --azul-escuro: #2d4967;
+  --azul-claro: #4292fe;
 }
 
 /* Reset básico */
@@ -73,7 +74,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 8px;
-
+  font-size: 12px;
   color: var(--branco);
   text-decoration: none;
   text-transform: uppercase;
@@ -82,7 +83,7 @@ body {
   font-weight: bold;
 }
 .btn-insta-header img {
-  width: 50px;
+  width: 40px;
   animation: shake 1.2s infinite;
   animation-delay: 1s;
 }
@@ -94,8 +95,9 @@ body {
 }
 .box-whatsapp p {
   color: var(--branco);
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
+  font-weight: bold;
 }
 /* ANIMAÇÃO WHATSAPP: pulsar */
 @keyframes pulse {
@@ -124,7 +126,7 @@ body {
   transition: background-color 0.3s;
 }
 .btn-zap-header img {
-  width: 50px;
+  width: 40px;
 }
 
 .header-funcionamento {
@@ -302,6 +304,153 @@ body {
   animation: flipIn 1.3s forwards;
 }
 
+/* !========================================== CONTAINER PRODUTOS COM FOTOS DESCRITIVAS  */
+.container_produtos_desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 3rem;
+  background-color: var(--cor-vermelho-principal);
+}
+.produtos_chamada {
+  width: 60vw;
+  text-transform: uppercase;
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+  font-size: 26px;
+  color: var(--branco);
+}
+.produtos_chamada span {
+  color: var(--amarelo);
+}
+.produtos_chamada_2 {
+  color: var(--branco);
+  font-size: 18px;
+  width: 60vw;
+  text-align: center;
+  font-weight: normal;
+  padding-bottom: 2rem;
+}
+.produtos_fotos_descritivas {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+.fotos_descritivas_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  padding: 3rem 0;
+  
+}
+.fotos_descritivas_box img{
+  width: 20vw;
+}
+.foto_descritiva_txt {
+  color: var(--amarelo);
+  font-size: 20px;
+  font-weight: bold;
+}
+.produtos_icones_descritivos {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  column-gap: 2rem;
+  padding: 3rem 0;
+  background-color: var(--branco);
+}
+.icones_descritivos_box {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  
+
+}
+.icones_descritivos_box img {
+  width: 15vw;
+}
+.icone_descritivo_tittle {
+  display: none;
+}
+.icone_descritivo_txt {
+  font-size: 18px;
+  width: 20vw;
+  padding-top: 1rem;
+  color: var(--preto);
+  text-align:center;
+}
+
+/* !!!! ==================================== CONTAINER INSTAGRAM COM FOTO DO CELULAR */
+
+
+/* !!!!===================================  CONTAINER FOTOS FACHADA DA FARMÁCIA =========== */
+.container_fachada {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.fotos_farmacia {
+  display: flex;
+  column-gap: 3rem;
+  margin-top: 2rem;
+}
+.fotos_farmacia img{
+  width: 25vw;
+}
+.botoes_fachada {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+  margin-top: 2rem;
+}
+.btn-fachada-instagram {
+  display: flex;
+  background-color: var(--branco);
+  color: var(--preto);
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  column-gap: 1rem;
+  font-weight: bold;
+  padding: 0.3rem 1rem;
+  border-radius: 16px;
+  background: linear-gradient(to right, #ffffff 0%, #d9d9d9 100%);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.15);
+}
+.btn-fachada-instagram img {
+  width: 40px;
+}
+.btn-fachada-whatsapp {
+  display: flex;
+  background-color: var(--branco);
+  color: var(--preto);
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  column-gap: 1rem;
+  font-weight: bold;
+  padding: 0.3rem 1rem;
+  border-radius: 24px;
+  background: linear-gradient(to right, #ffffff 0%, #d9d9d9 100%);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.15);
+}
+.btn-fachada-whatsapp img {
+  width: 40px;
+}
+
+
 /* ! FOOTERRRRRRRRRRRRRRRRRRR */
 .container_footer {
   margin-top: 4rem;
@@ -407,7 +556,18 @@ body {
     z-index: 10;
     
   }
-  
+  .btn-flutuante-instagram {
+    font-size: 12px;
+  }
+  .btn-flutuante-instagram img {
+    width: 30px;
+  }
+  .btn-flutuante-whatsapp {
+    font-size: 12px;
+  }
+  .btn-flutuante-whatsapp img {
+    width: 30px;
+  }
   /* !!!! ============================= CONTAINER QUALIDADES AZUIS ============================= */
   .container_qualidades {
   margin-top: 3rem;
@@ -442,4 +602,154 @@ body {
   .box_azul_text {
     font-size: 18px;
   }
+  /* !!================================== CONTAINER APENAS COM FOTOS  E  DESCRIÇÃO */
+  /* !==========================================  */
+.container_produtos_desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 3rem;
+  background-color: var(--cor-vermelho-principal);
+}
+.produtos_chamada {
+  width: 80vw;
+  text-transform: uppercase;
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+  font-size: 22px;
+  color: var(--branco);
+}
+.produtos_chamada span {
+  color: var(--amarelo);
+}
+.produtos_chamada_2 {
+  color: var(--branco);
+  font-size: 16px;
+  width: 80vw;
+  text-align: center;
+  font-weight: normal;
+  padding-bottom: 2rem;
+}
+.produtos_fotos_descritivas {
+  display: none;
+}
+.fotos_descritivas_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+  padding: 3rem 0;
+  
+}
+.fotos_descritivas_box img{
+  width: 20vw;
+}
+.foto_descritiva_txt {
+  color: var(--amarelo);
+  font-size: 20px;
+  font-weight: bold;
+}
+.produtos_icones_descritivos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+  column-gap: 2rem;
+  padding: 3rem 0;
+  background-color: var(--cor-vermelho-principal);
+}
+.icones_descritivos_box {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  align-items: center;
+  margin-bottom: 2rem;
+  justify-content: start;
+
+}
+.icone_descritivo_tittle {
+  font-size: 14px;
+  text-align: center;
+  color: var(--amarelo);
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+.icones_descritivos_box img {
+  width: 15vw;
+}
+.icone_descritivo_txt {
+  font-size: 16px;
+  width: 40vw;
+  padding-top: 1rem;
+  color: var(--branco);
+  text-align:center;
+}
+
+
+/* !!!!===================================  CONTAINER FOTOS FACHADA DA FARMÁCIA =========== */
+.container_fachada {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+.fotos_farmacia {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  margin-top: 2rem;
+}
+.fotos_farmacia img{
+  width: 50vw;
+}
+.botoes_fachada {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  row-gap: 2rem;
+  margin-top: 2rem;
+}
+.btn-fachada-instagram {
+  display: flex;
+  background-color: var(--branco);
+  color: var(--preto);
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  column-gap: 1rem;
+  font-weight: bold;
+  padding: 0.3rem 1rem;
+  border-radius: 16px;
+  background: linear-gradient(to right, #ffffff 0%, #d9d9d9 100%);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.15);
+}
+.btn-fachada-instagram img {
+  width: 40px;
+}
+.btn-fachada-whatsapp {
+  display: flex;
+  background-color: var(--branco);
+  color: var(--preto);
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  column-gap: 1rem;
+  font-weight: bold;
+  padding: 0.3rem 1rem;
+  border-radius: 24px;
+  background: linear-gradient(to right, #ffffff 0%, #d9d9d9 100%);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.15);
+}
+.btn-fachada-whatsapp img {
+  width: 40px;
+}
+
+
 }

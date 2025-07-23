@@ -107,62 +107,154 @@
       </div>
 
       <!--------------------- CONTAINER PRODUTOS ------------------------>
-
-
-
-
-    </main>
-    <footer>
-        <div class="container_footer">
-            <img src="./assets/logo_full.png" alt="" class="logo_footer">
+      <div class="container_produtos_desktop">
+        <h2 class="produtos_chamada">
+          seu bem-estar em primeiro lugar:
+          <span>aqui você encontra cuidados para cada momento.</span>
+        </h2>
+        <h3 class="produtos_chamada_2">
+          Oferecemos uma linha completa de medicamentos, dermocosméticos,
+          suplementos e serviços farmacêuticos como aferição de pressão e
+          aplicação de injetáveis.
+        </h3>
+        <div class="produtos_fotos_descritivas">
+          <div class="fotos_descritivas_box">
+            <img src="./assets/foto_medicamentos.png" alt="" />
+            <p class="foto_descritiva_txt">MEDICAMENTOS</p>
+          </div>
+          <div class="fotos_descritivas_box">
+            <img src="./assets/foto_perfumaria.png" alt="" />
+            <p class="foto_descritiva_txt">PERFUMARIA E COSMÉTICOS</p>
+          </div>
+          <div class="fotos_descritivas_box">
+            <img src="./assets/foto_suplemento.png" alt="" />
+            <p class="foto_descritiva_txt">SUPLEMENTOS</p>
+          </div>
+          <div class="fotos_descritivas_box">
+            <img src="./assets/foto_afericao.png" alt="" />
+            <p class="foto_descritiva_txt">AFERIÇÃO DE PRESSÃO</p>
+          </div>
         </div>
+        <div class="produtos_icones_descritivos">
+          <div class="icones_descritivos_box">
+            <p class="icone_descritivo_tittle">MEDICAMENTOS</p>
+            <img src="./assets/icone_medicamento.png" alt="" />
+            <p class="icone_descritivo_txt">
+              Encontre tudo o que você precisa para sua saúde em um só lugar:
+              medicamentos com ou sem prescrição, com qualidade garantida e
+              total confiança.
+            </p>
+          </div>
 
+          <div class="icones_descritivos_box">
+            <p class="icone_descritivo_tittle">PERFUMARIA E COSMÉTICOS</p>
+            <img src="./assets/icone_permufaria.png" alt="" />
+            <p class="icone_descritivo_txt">
+              Realce sua beleza e bem-estar com nossa linha exclusiva de
+              fragrâncias, cosméticos e cuidados pessoais selecionados para
+              você.
+            </p>
+          </div>
 
+          <div class="icones_descritivos_box">
+            <p class="icone_descritivo_tittle">SUPLEMENTOS</p>
+            <img src="./assets/icone_suplemento.png" alt="" />
+            <p class="icone_descritivo_txt">
+              Potencialize sua saúde com suplementos e vitaminas ideais para sua
+              nutrição e bem-estar diário.
+            </p>
+          </div>
 
+          <div class="icones_descritivos_box">
+            <p class="icone_descritivo_tittle">AFERIÇÃO DE PRESSÃO</p>
+            <img src="./assets/icone_afericao.png" alt="" />
+            <p class="icone_descritivo_txt">
+              Cuidamos de você com profissionalismo: aferição de pressão e
+              aplicação de injetáveis com segurança e atenção especializada.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--------------------------------  CONTAINER INSTAGRAM ------------------------>
+      
+
+      <!---------------------------- CONTAINER FOTOS DA FARMÁCIA -------------------- -->
+      <div class="container_fachada">
+        <div class="fotos_farmacia">
+          <img src="./assets/farmacia_1.png" alt="">
+          <img src="./assets/farmacia_2.png" alt="">
+          <img src="./assets/farmacia_3.png" alt="">
+        </div>
+        <div class="botoes_fachada">
+          <a
+            href="https://www.instagram.com/mrfarmaps/"
+            target="_blank"
+            class="btn-fachada-instagram"
+          >
+            <img src="assets/insta_icon.png" alt="Instagram" />
+            Visite nosso Instagram
+          </a>
+
+          <a
+            href="https://wa.me/5562995133306"
+            target="_blank"
+            class="btn-fachada-whatsapp"
+          >
+            <img src="assets/zap_icon.png" alt="WhatsApp" />
+            Chame no Whatsapp
+          </a>
+        </div>
+      </div>
+    </main>
+    <!--------------------- FOOTER ------------------------------->
+    <footer>
+      <div class="container_footer">
+        <img src="./assets/logo_full.png" alt="" class="logo_footer" />
+      </div>
     </footer>
     <!-- SCRIPT ======================================== -->
     <script>
-  const isMobile = window.innerWidth <= 768;
+      const isMobile = window.innerWidth <= 768;
 
-  const boxes = document.querySelectorAll(".box_azul");
+      const boxes = document.querySelectorAll(".box_azul");
 
-  if (!isMobile) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+      if (!isMobile) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          {
+            threshold: 0.6,
           }
+        );
+
+        boxes.forEach((box) => {
+          observer.observe(box);
         });
-      },
-      {
-        threshold: 0.6,
       }
-    );
 
-    boxes.forEach((box) => {
-      observer.observe(box);
-    });
-  }
+      const qualidadeTexto = document.querySelector(".qualidade_horario");
 
-  const qualidadeTexto = document.querySelector(".qualidade_horario");
-
-  if (!isMobile && qualidadeTexto) {
-    const observerQualidade = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            qualidadeTexto.classList.add("ativo");
+      if (!isMobile && qualidadeTexto) {
+        const observerQualidade = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                qualidadeTexto.classList.add("ativo");
+              }
+            });
+          },
+          {
+            threshold: 0.6,
           }
-        });
-      },
-      {
-        threshold: 0.6,
-      }
-    );
+        );
 
-    observerQualidade.observe(qualidadeTexto);
-  }
-</script>
+        observerQualidade.observe(qualidadeTexto);
+      }
+    </script>
   </body>
 </html>

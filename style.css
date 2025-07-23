@@ -481,7 +481,16 @@ body {
 
 /* ===========================  VERSÃO MOBILE =================================== */
 @media (max-width: 767px) {
-  
+  .header {
+  background-color: var(--cor-vermelho-principal);
+  padding: 16px 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 100px;
+}
   .header-content {
     display: flex;
     
@@ -542,12 +551,14 @@ body {
   }
 
   .header-funcionamento {
-    width: 40%;
+    width: 50%;
+    
   }
 
   .header-funcionamento p {
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
+    padding-right: 1rem;
   }
 
   .header-funcionamento p span {

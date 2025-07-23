@@ -47,16 +47,6 @@
     <main>
       <!--------------------------------- BANNER INICIAL --------------------------->
       <div class="container_banner">
-        <img
-          src="./assets/banner_header_desktop.png"
-          alt=""
-          class="banner_desktop"
-        />
-        <img
-          src="./assets/banner_header_mobile.png"
-          alt=""
-          class="banner_mobile"
-        />
         <div class="botoes_flutuantes">
           <a
             href="https://www.instagram.com/mrfarmaps/"
@@ -117,50 +107,62 @@
       </div>
 
       <!--------------------- CONTAINER PRODUTOS ------------------------>
-      
+
 
 
 
     </main>
+    <footer>
+        <div class="container_footer">
+            <img src="./assets/logo_full.png" alt="" class="logo_footer">
+        </div>
 
+
+
+    </footer>
     <!-- SCRIPT ======================================== -->
     <script>
-      const boxes = document.querySelectorAll(".box_azul");
+  const isMobile = window.innerWidth <= 768;
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        {
-          threshold: 0.6, // visibilidade mínima pra ativar
-        }
-      );
+  const boxes = document.querySelectorAll(".box_azul");
 
-      boxes.forEach((box) => {
-        observer.observe(box);
-      });
-      const qualidadeTexto = document.querySelector(".qualidade_horario");
-
-      const observerQualidade = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              qualidadeTexto.classList.add("ativo");
-            }
-          });
-        },
-        {
-          threshold: 0.6,
-        }
-      );
-
-      if (qualidadeTexto) {
-        observerQualidade.observe(qualidadeTexto);
+  if (!isMobile) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.6,
       }
-    </script>
+    );
+
+    boxes.forEach((box) => {
+      observer.observe(box);
+    });
+  }
+
+  const qualidadeTexto = document.querySelector(".qualidade_horario");
+
+  if (!isMobile && qualidadeTexto) {
+    const observerQualidade = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            qualidadeTexto.classList.add("ativo");
+          }
+        });
+      },
+      {
+        threshold: 0.6,
+      }
+    );
+
+    observerQualidade.observe(qualidadeTexto);
+  }
+</script>
   </body>
 </html>

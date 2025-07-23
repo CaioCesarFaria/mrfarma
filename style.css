@@ -757,6 +757,25 @@ body {
 .btn-fachada-whatsapp img {
   width: 40px;
 }
-
+/* ! FOOTERRRRRRRRRRRRRRRRRRR */
+.container_footer {
+  
+  margin-top: 4rem;
+  padding: 5rem;
+  background-color: var(--cor-vermelho-principal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.endereco_footer {
+  font-size: 18px;
+  color: var(--branco);
+  padding-bottom: 2rem;
+}
+.logo_footer {
+  margin-top: 2rem;
+  width: 30vw;
+}
 
 }

@@ -459,7 +459,9 @@ body {
 .btn-fachada-whatsapp img {
   width: 40px;
 }
-
+.botao_avaliacao {
+  margin-top: 3rem;
+}
 
 /* ! FOOTERRRRRRRRRRRRRRRRRRR */
 .container_footer {
@@ -771,6 +773,10 @@ body {
 }
 .btn-fachada-whatsapp img {
   width: 40px;
+}
+
+.botao_avaliacao {
+  margin-top: 2rem;
 }
 /* ! FOOTERRRRRRRRRRRRRRRRRRR */
 .container_footer {

@@ -531,7 +531,7 @@ body {
   }
 
   .btn-zap-header img {
-    width: 25px;
+    width: 20px;
     animation: none; /* remove a animação no mobile */
   }
 
@@ -549,7 +549,7 @@ body {
   }
 
   .btn-insta-header img {
-    width: 25px;
+    width: 20px;
     animation: none; /* remove a animação no mobile */
   }
 
@@ -559,7 +559,7 @@ body {
   }
 
   .header-funcionamento p {
-    font-size: 10px;
+    font-size: 8px;
     text-align: center;
     padding-right: 1rem;
   }
@@ -678,7 +678,7 @@ body {
   width: 100vw;
   justify-content: center;
   column-gap: 2rem;
-  padding: 3rem 0;
+  padding: 1rem 0;
   background-color: var(--cor-vermelho-principal);
 }
 .icones_descritivos_box {
@@ -698,7 +698,7 @@ body {
   font-weight: bold;
 }
 .icones_descritivos_box img {
-  width: 15vw;
+  width: 30vw;
 }
 .icone_descritivo_txt {
   font-size: 16px;
@@ -787,6 +787,7 @@ body {
   font-size: 18px;
   color: var(--branco);
   padding-bottom: 2rem;
+  text-align: center;
 }
 .logo_footer {
   margin-top: 2rem;

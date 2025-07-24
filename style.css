@@ -36,7 +36,7 @@ body {
   display: flex;
 
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .logo {
@@ -137,11 +137,11 @@ body {
 }
 
 .header-funcionamento {
-  width: 30vw;
+  width: 35vw;
 }
 .header-funcionamento p {
   color: var(--branco);
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   text-align: center;
   margin-right: 3rem;
@@ -324,7 +324,7 @@ body {
 .produtos_chamada {
   width: 60vw;
   text-transform: uppercase;
-  padding: 3rem 0 2rem 0;
+  padding: 3rem 0 1rem 0;
   text-align: center;
   font-size: 26px;
   color: var(--branco);
@@ -338,7 +338,7 @@ body {
   width: 60vw;
   text-align: center;
   font-weight: normal;
-  padding-bottom: 2rem;
+  
 }
 .produtos_fotos_descritivas {
   display: flex;
@@ -369,7 +369,7 @@ body {
   justify-content: center;
   column-gap: 2rem;
   padding: 3rem 0;
-  background-color: var(--branco);
+  background-color: var(--cor-vermelho-principal);
 }
 .icones_descritivos_box {
   display: flex;
@@ -383,13 +383,16 @@ body {
   width: 15vw;
 }
 .icone_descritivo_tittle {
-  display: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  color: var(--amarelo);
 }
 .icone_descritivo_txt {
   font-size: 18px;
   width: 20vw;
   padding-top: 1rem;
-  color: var(--preto);
+  color: var(--branco);
   text-align:center;
 }
 
@@ -705,7 +708,7 @@ body {
   text-align:center;
 }
 
-/* !! ========================== CONTAINER FRAME INSTAGRAM   */
+
 
 /* !!!!===================================  CONTAINER FOTOS FACHADA DA FARMÁCIA =========== */
 .container_fachada {
